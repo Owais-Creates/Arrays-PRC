@@ -2,21 +2,19 @@
 
 // Q1 - Create a program with array of strings and returns the longest string in the array.
 
-// let strArray = ["asdfgh", "sdas", "asdfgsdh"];
-// let defaultPosition = strArray[0];
-// let longestString = "";
+const stringArray = ["owais","a","d"];
 
-// for (i = 1; i < strArray.length; i++) {
-//     if (strArray[i].length > defaultPosition.length) {
-//         longestString = strArray[i];
+let longest = stringArray[0];
 
-//     } else {
-//         console.log(`${defaultPosition} is longer`);
-//         break
-//     }
-// }
+for (let i = 1; i < stringArray.length; i++) {
 
-// console.log(longestString)
+  if (stringArray[i].length > longest.length) {
+    longest = stringArray[i];
+  }
+}
+
+console.log("The longest string is:", longest); // OUTPUT - The longest string is: owais
+
 
 //--------------------------------------------------------------------------------------------------
 
@@ -65,19 +63,24 @@ console.log(result) //OUTPUT - { '0': 1, '2': 1, '4': 1, '5': 3, '7': 1, '8': 1,
 
 // Q4 - Write a js program which pops out the repeated element in the array. 
 
-const repeatedArray = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd'];
+const repeatedArray = [4, 4, 2, 2, 1, 1, 0, 0];
 
 
 for (i = 0; i < repeatedArray.length; i++) {
-    for (j = 0; j < repeatedArray.length; j++) {
-        if (repeatedArray[i] === repeatedArray[j]) {
-         repeatedArray.pop(repeatedArray[j])
-        }
+
+    if (repeatedArray[i] == repeatedArray[i + 1]) {
+        repeatedArray.splice(i, 1)
     }
 
 }
 
-console.log(repeatedArray);
+console.log(repeatedArray); // OUTPUT - [4,2,1,0] 
+// Disclamer - It will only work if the element is duplicated only once. And if the same  element comes twice consecutively it will remove one occurrence and continue to check for next consecutive elements.
+
+//---------------------------------------------------------------------------------------------------
+
+
+
 
 
 
