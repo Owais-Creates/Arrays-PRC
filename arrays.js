@@ -2,15 +2,15 @@
 
 // Q1 - Create a program with array of strings and returns the longest string in the array.
 
-const stringArray = ["owais","a","d"];
+const stringArray = ["owais", "a", "d"];
 
 let longest = stringArray[0];
 
 for (let i = 1; i < stringArray.length; i++) {
 
-  if (stringArray[i].length > longest.length) {
-    longest = stringArray[i];
-  }
+    if (stringArray[i].length > longest.length) {
+        longest = stringArray[i];
+    }
 }
 
 console.log("The longest string is:", longest); // OUTPUT - The longest string is: owais
@@ -79,7 +79,24 @@ console.log(repeatedArray); // OUTPUT - [4,2,1,0]
 
 //---------------------------------------------------------------------------------------------------
 
+const specificArray = [1, 2, 3, 4, 5];
+let specificElem = 5;
+let indexPosition;
+let isPresent = specificArray.includes(specificElem);
 
+if (!isPresent) {
+    console.log(`elem is not present`);
+
+}
+
+for (i = 0; i < specificArray.length; i++) {
+
+    if (specificElem == specificArray[i]) {
+        indexPosition = specificArray.indexOf(specificArray[i])
+    }
+}
+
+console.log(`The index position of ${specificElem} is ${indexPosition}`) // OUTPUT - The index position of 5 is 4
 
 
 
