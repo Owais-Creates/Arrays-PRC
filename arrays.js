@@ -79,6 +79,8 @@ console.log(repeatedArray); // OUTPUT - [4,2,1,0]
 
 //---------------------------------------------------------------------------------------------------
 
+// Q5 - Write a program to know the index of a specific elem without using the inbuilt function.
+
 const specificArray = [1, 2, 3, 4, 5];
 let specificElem = 5;
 let indexPosition;
@@ -92,11 +94,15 @@ if (!isPresent) {
 for (i = 0; i < specificArray.length; i++) {
 
     if (specificElem == specificArray[i]) {
-        indexPosition = specificArray.indexOf(specificArray[i])
+        indexPosition = i;
     }
 }
 
 console.log(`The index position of ${specificElem} is ${indexPosition}`) // OUTPUT - The index position of 5 is 4
+
+//---------------------------------------------------------------------------------------------------
+
+// Q5 - Write a program which pops out the last elem just like "pop()" method but without actually using it.
 
 
 
