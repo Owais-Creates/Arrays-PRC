@@ -104,8 +104,70 @@ console.log(`The index position of ${specificElem} is ${indexPosition}`) // OUTP
 
 // Q5 - Write a program which pops out the last elem just like "pop()" method but without actually using it.
 
+const myArr = [1, 2, 3, 4, 5];
+console.log("current Array", myArr);
 
+let poppedElement;
 
+function customPop() {
+
+    poppedElement = myArr[myArr.length - 1];
+    myArr.length = myArr.length - 1
+    return poppedElement;
+
+}
+
+console.log(customPop(), "is the popped element and the new array is", myArr);
+/* // OUTPUT -
+ current Array [ 1, 2, 3, 4, 5 ]
+5 is the popped element and the new array is [ 1, 2, 3, 4 ]
+*/
+
+//---------------------------------------------------------------------------------------------------
+
+// Q6 - Write a function to find the maximum element in an array.
+
+const maxArray = (arr) => {
+    let maxElem = arr[0]
+
+    for (i = 1; i < arr.length; i++) {
+
+        if (arr[i] > maxElem) {
+            maxElem = arr[i]
+
+        }
+    }
+
+    return maxElem
+
+}
+
+const arr = [6, 2, 3, 4, 100]
+console.log(maxArray(arr), "is the biggest element in the array");
+
+//---------------------------------------------------------------------------------------------------
+
+// Q7 - Write a function to find the minimum element in an array.
+
+const minArray = (arr) => {
+    let minElem = arr[0]
+
+    for (i = 1; i < arr.length; i++) {
+
+        if (arr[i] < minElem) {
+            minElem = arr[i]
+
+        }
+    }
+
+    return minElem
+
+}
+
+const minArr = [0, 2, 3, 4, 1]
+console.log(minArray(minArr), "is the smallest in the array");
+
+//---------------------------------------------------------------------------------------------------
 
 
 
