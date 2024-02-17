@@ -169,6 +169,28 @@ console.log(minArray(minArr), "is the smallest in the array");
 
 //---------------------------------------------------------------------------------------------------
 
+//  Q8 - Write a function which checks whether a given array is sorted or not in ASCENDING ORDER.
+
+const checkSortedArray = (arr) => {
+    let sorted = true;
+
+    for (let i = 0; i < arr.length ; i++) {
+        if (checkArr[i] > checkArr[i + 1]) {
+            sorted = false;
+            break;
+        }
+    }
+
+    if (sorted) {
+        console.log("This array is sorted in ascending order");
+    } else {
+        console.log("This array is not sorted in ascending order");
+    }
+}
+
+let checkArr = [1,2,3,4,5,6];
+checkSortedArray(arr); //OUTPUT - This array is sorted in ascending order
+
 
 
 
