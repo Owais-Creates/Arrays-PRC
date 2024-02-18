@@ -102,7 +102,7 @@ console.log(`The index position of ${specificElem} is ${indexPosition}`) // OUTP
 
 //---------------------------------------------------------------------------------------------------
 
-// Q5 - Write a program which pops out the last elem just like "pop()" method but without actually using it.
+// Q6 - Write a program which pops out the last elem just like "pop()" method but without actually using it.
 
 const myArr = [1, 2, 3, 4, 5];
 console.log("current Array", myArr);
@@ -125,7 +125,7 @@ console.log(customPop(), "is the popped element and the new array is", myArr);
 
 //---------------------------------------------------------------------------------------------------
 
-// Q6 - Write a function to find the maximum element in an array.
+// Q7 - Write a function to find the maximum element in an array.
 
 const maxArray = (arr) => {
     let maxElem = arr[0]
@@ -147,7 +147,7 @@ console.log(maxArray(arr), "is the biggest element in the array");
 
 //---------------------------------------------------------------------------------------------------
 
-// Q7 - Write a function to find the minimum element in an array.
+// Q8 - Write a function to find the minimum element in an array.
 
 const minArray = (arr) => {
     let minElem = arr[0]
@@ -169,7 +169,7 @@ console.log(minArray(minArr), "is the smallest in the array");
 
 //---------------------------------------------------------------------------------------------------
 
-//  Q8 - Write a function which checks whether a given array is sorted or not in ASCENDING ORDER.
+//  Q9 - Write a function which checks whether a given array is sorted or not in ASCENDING ORDER.
 
 const checkSortedArray = (arr) => {
     let sorted = true;
@@ -193,25 +193,30 @@ checkSortedArray(arr); //OUTPUT - This array is sorted in ascending order
 
 // ------------------------------------------------------------------------------------------------
 
-const checkArray = (arr) => {
-    let sorted = true;
+// Q10 - 
 
-    for (let i = 0; i < arr.length; i++) {
-        if (checkArr[i] > checkArr[i + 1]) {
-            sorted = false;
-            break;
-        }
-    }
+let evenOddArray = [2, 3, 4, 5, 6, 7]
 
-    if (sorted) {
-        console.log("This array is sorted in ascending order");
+for (i = 0; i < evenOddArray.length; i++) {
+
+    if (evenOddArray[i] % 2 == 0) {
+        evenOddArray[i] = evenOddArray[i] * evenOddArray[i]
+
     } else {
-        console.log("This array is not sorted in ascending order");
+        evenOddArray[i] = evenOddArray[i] * evenOddArray[i] * evenOddArray[i]
     }
+
 }
 
-let chArr = [1, 2, 3, 4, 5, 6];
-checkSortedArray(arr); //OUTPUT - This array is sorted in ascending order
+console.log(evenOddArray); // OUTPUT - [ 4, 27, 16, 125, 36, 343 ]
+
+// ---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
